@@ -1,9 +1,11 @@
 :root {
     --background-color: #f0f8ff;
-    --text-color: #333;
+    --text-color: #333; /* Change this to your desired text color */
     --container-background: #fff;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --primary-font: 'Arial', sans-serif;
+    --button-background-color: #4CAF50; /* New variable for button background color */
+    --button-text-color: #fff; /* New variable for button text color */
 }
 
 body {
@@ -52,8 +54,8 @@ body {
 button {
     padding: 10px 20px;
     font-size: 1em;
-    color: var(--text-color);
-    background-color: var(--container-background);
+    color: var(--button-text-color); /* Use the new variable for button text color */
+    background-color: var(--button-background-color); /* Use the new variable for button background color */
     border: 2px solid var(--text-color);
     border-radius: 5px;
     cursor: pointer;
