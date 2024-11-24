@@ -1,11 +1,14 @@
 :root {
-    --background-color: #f0f8ff;
-    --text-color: #333; /* Change this to your desired text color */
-    --container-background: #fff;
-    --box-shadow-color: rgba(0, 0, 0, 0.1);
-    --primary-font: 'Arial', sans-serif;
-    --button-background-color: #4CAF50; /* New variable for button background color */
-    --button-text-color: #fff; /* New variable for button text color */
+    --background-color: #eef2f7;
+    --text-color: #2c3e50;
+    --container-background: #ffffff;
+    --box-shadow-color: rgba(0, 0, 0, 0.15);
+    --primary-font: 'Roboto', sans-serif;
+    --button-background-color: #007BFF;
+    --button-text-color: #ffffff;
+    --button-hover-background: #0056b3;
+    --button-hover-text-color: #ffffff;
+    --accent-color: #f39c12;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,45 +27,62 @@ body {
 .fact-container {
     text-align: center;
     max-width: 600px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     background-color: var(--container-background);
-    box-shadow: 0 0 10px var(--box-shadow-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .fact-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px var(--box-shadow-color);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px var(--box-shadow-color);
+    background-color: #f8f9fa;
 }
 
 .fact {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    font-weight: bold;
     margin-bottom: 20px;
+    color: var(--accent-color);
 }
 
 .category {
-    font-size: 1em;
-    color: #555;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 10px;
 }
 
 .source {
     font-size: 0.9em;
-    color: #888;
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.6;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1em;
-    color: var(--button-text-color); /* Use the new variable for button text color */
-    background-color: var(--button-background-color); /* Use the new variable for button background color */
-    border: 2px solid var(--text-color);
-    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.2);
 }
 
 button:hover {
-    background-color: var(--text-color);
-    color: var(--container-background);
+    background-color: var(--button-hover-background);
+    color: var(--button-hover-text-color);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
 }
